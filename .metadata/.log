@@ -1,0 +1,1188 @@
+!SESSION 2011-08-03 18:57:19.477 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_25
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=sv_SE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.ui.intro 4 0 2011-08-03 18:57:52.271
+!MESSAGE L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\intro\sample.xml (Det går inte att hitta sökvägen)
+!STACK 0
+java.io.FileNotFoundException: L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\intro\sample.xml (Det går inte att hitta sökvägen)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at javax.xml.parsers.DocumentBuilder.parse(Unknown Source)
+	at org.eclipse.ui.internal.intro.impl.model.loader.IntroContentParser.parse(IntroContentParser.java:94)
+	at org.eclipse.ui.internal.intro.impl.model.loader.IntroContentParser.<init>(IntroContentParser.java:56)
+	at org.eclipse.ui.internal.intro.impl.model.IntroModelRoot.loadDOM(IntroModelRoot.java:885)
+	at org.eclipse.ui.internal.intro.impl.model.IntroModelRoot.processConfigExtension(IntroModelRoot.java:411)
+	at org.eclipse.ui.internal.intro.impl.model.IntroModelRoot.resolveConfigExtensions(IntroModelRoot.java:381)
+	at org.eclipse.ui.internal.intro.impl.model.IntroModelRoot.resolveChildren(IntroModelRoot.java:242)
+	at org.eclipse.ui.internal.intro.impl.model.AbstractIntroContainer.getChildren(AbstractIntroContainer.java:86)
+	at org.eclipse.ui.internal.intro.impl.model.IntroModelRoot.loadModel(IntroModelRoot.java:164)
+	at org.eclipse.ui.internal.intro.impl.model.loader.BaseExtensionPointManager.loadModel(BaseExtensionPointManager.java:95)
+	at org.eclipse.ui.internal.intro.impl.model.loader.ExtensionPointManager.loadCurrentModel(ExtensionPointManager.java:61)
+	at org.eclipse.ui.internal.intro.impl.model.loader.ExtensionPointManager.getCurrentModel(ExtensionPointManager.java:73)
+	at org.eclipse.ui.intro.config.CustomizableIntroPart.init(CustomizableIntroPart.java:155)
+	at org.eclipse.ui.internal.ViewIntroAdapterPart.init(ViewIntroAdapterPart.java:157)
+	at org.eclipse.ui.internal.ViewReference.createPartHelper(ViewReference.java:343)
+	at org.eclipse.ui.internal.ViewReference.createPart(ViewReference.java:229)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:595)
+	at org.eclipse.ui.internal.Perspective.showView(Perspective.java:2245)
+	at org.eclipse.ui.internal.WorkbenchPage.busyShowView(WorkbenchPage.java:1071)
+	at org.eclipse.ui.internal.WorkbenchPage$20.run(WorkbenchPage.java:3822)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.showView(WorkbenchPage.java:3819)
+	at org.eclipse.ui.internal.WorkbenchPage.showView(WorkbenchPage.java:3795)
+	at org.eclipse.ui.internal.WorkbenchIntroManager.createIntro(WorkbenchIntroManager.java:173)
+	at org.eclipse.ui.internal.WorkbenchIntroManager.showIntro(WorkbenchIntroManager.java:120)
+	at org.eclipse.ui.application.WorkbenchWindowAdvisor.openIntro(WorkbenchWindowAdvisor.java:177)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchWindowAdvisor.openIntro(IDEWorkbenchWindowAdvisor.java:515)
+	at org.eclipse.ui.internal.WorkbenchWindow.open(WorkbenchWindow.java:789)
+	at org.eclipse.ui.internal.Workbench$24.runWithException(Workbench.java:1235)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4041)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3660)
+	at org.eclipse.ui.application.WorkbenchAdvisor.openWindows(WorkbenchAdvisor.java:803)
+	at org.eclipse.ui.internal.Workbench$31.runWithException(Workbench.java:1567)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4041)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3660)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2548)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2438)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:671)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:664)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:115)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:369)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:619)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:574)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1407)
+
+!ENTRY org.eclipse.jface 2 0 2011-08-03 18:58:07.523
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-08-03 18:58:07.523
+!MESSAGE A conflict occurred for ALT+SHIFT+D H:
+Binding(ALT+SHIFT+D H,
+	ParameterizedCommand(Command(com.instantiations.designer.gwt.launch.junitGWTLaunchShortcut.debug,Debug GWT JUnit Test,
+		Debug GWT JUnit Test,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D H,
+	ParameterizedCommand(Command(org.eclipse.php.deubg.ui.phpexeShortcut.debug,Debug PHP Script,
+		Debug PHP Script,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-08-03 18:58:07.523
+!MESSAGE A conflict occurred for ALT+SHIFT+X H:
+Binding(ALT+SHIFT+X H,
+	ParameterizedCommand(Command(com.instantiations.designer.gwt.launch.junitGWTLaunchShortcut.run,Run GWT JUnit Test,
+		Run GWT JUnit Test,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X H,
+	ParameterizedCommand(Command(org.eclipse.php.deubg.ui.phpexeShortcut.run,Run PHP Script,
+		Run PHP Script,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-08-03 18:58:07.523
+!MESSAGE A conflict occurred for CTRL+SHIFT+R:
+Binding(CTRL+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.navigate.openResource,Open Resource,
+		Open an editor on a particular resource,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.ide.handlers.OpenResourceHandler@e38fae,
+		[Lorg.eclipse.ui.internal.commands.Parameter;@1ee1619,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+R,
+	ParameterizedCommand(Command(com.aptana.editor.toggleWordWrapCommand,Word Wrap,
+		,
+		Category(org.eclipse.ui.category.window,Window,null,true),
+		com.aptana.editor.common.internal.commands.ToggleWordWrapHandler,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2011-08-04 10:53:18.385 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_25
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=sv_SE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2011-08-04 10:54:05.665
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-08-04 10:54:05.665
+!MESSAGE A conflict occurred for ALT+SHIFT+D H:
+Binding(ALT+SHIFT+D H,
+	ParameterizedCommand(Command(com.instantiations.designer.gwt.launch.junitGWTLaunchShortcut.debug,Debug GWT JUnit Test,
+		Debug GWT JUnit Test,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D H,
+	ParameterizedCommand(Command(org.eclipse.php.deubg.ui.phpexeShortcut.debug,Debug PHP Script,
+		Debug PHP Script,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-08-04 10:54:05.665
+!MESSAGE A conflict occurred for ALT+SHIFT+X H:
+Binding(ALT+SHIFT+X H,
+	ParameterizedCommand(Command(com.instantiations.designer.gwt.launch.junitGWTLaunchShortcut.run,Run GWT JUnit Test,
+		Run GWT JUnit Test,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X H,
+	ParameterizedCommand(Command(org.eclipse.php.deubg.ui.phpexeShortcut.run,Run PHP Script,
+		Run PHP Script,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-08-04 10:54:05.665
+!MESSAGE A conflict occurred for CTRL+SHIFT+R:
+Binding(CTRL+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.navigate.openResource,Open Resource,
+		Open an editor on a particular resource,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.ide.handlers.OpenResourceHandler@1a5d193,
+		[Lorg.eclipse.ui.internal.commands.Parameter;@16237e0,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+R,
+	ParameterizedCommand(Command(com.aptana.editor.toggleWordWrapCommand,Word Wrap,
+		,
+		Category(org.eclipse.ui.category.window,Window,null,true),
+		com.aptana.editor.common.internal.commands.ToggleWordWrapHandler,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2011-08-04 10:54:44.573 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_25
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=sv_SE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2011-08-04 10:54:54.809
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-08-04 10:54:54.809
+!MESSAGE A conflict occurred for ALT+SHIFT+D H:
+Binding(ALT+SHIFT+D H,
+	ParameterizedCommand(Command(com.instantiations.designer.gwt.launch.junitGWTLaunchShortcut.debug,Debug GWT JUnit Test,
+		Debug GWT JUnit Test,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D H,
+	ParameterizedCommand(Command(org.eclipse.php.deubg.ui.phpexeShortcut.debug,Debug PHP Script,
+		Debug PHP Script,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-08-04 10:54:54.809
+!MESSAGE A conflict occurred for ALT+SHIFT+X H:
+Binding(ALT+SHIFT+X H,
+	ParameterizedCommand(Command(com.instantiations.designer.gwt.launch.junitGWTLaunchShortcut.run,Run GWT JUnit Test,
+		Run GWT JUnit Test,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X H,
+	ParameterizedCommand(Command(org.eclipse.php.deubg.ui.phpexeShortcut.run,Run PHP Script,
+		Run PHP Script,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-08-04 10:54:54.810
+!MESSAGE A conflict occurred for CTRL+SHIFT+R:
+Binding(CTRL+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.navigate.openResource,Open Resource,
+		Open an editor on a particular resource,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.ide.handlers.OpenResourceHandler@954549,
+		[Lorg.eclipse.ui.internal.commands.Parameter;@1f7dab1,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+R,
+	ParameterizedCommand(Command(com.aptana.editor.toggleWordWrapCommand,Word Wrap,
+		,
+		Category(org.eclipse.ui.category.window,Window,null,true),
+		com.aptana.editor.common.internal.commands.ToggleWordWrapHandler,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.aptana.usage 4 0 2011-08-04 10:54:59.987
+!MESSAGE Unable to connect to database
+!STACK 0
+java.sql.SQLException: Failed to start database 'aptanaDB', see the next exception for details.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at com.aptana.usage.AptanaDB.getConnection(AptanaDB.java:151)
+	at com.aptana.usage.AptanaDB.tableExists(AptanaDB.java:193)
+	at com.aptana.usage.EventLogger.getInstance(EventLogger.java:42)
+	at com.aptana.usage.PingStartup.updateAnonymousId(PingStartup.java:115)
+	at com.aptana.usage.PingStartup.access$0(PingStartup.java:87)
+	at com.aptana.usage.PingStartup$1.run(PingStartup.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.sql.SQLException: Failed to start database 'aptanaDB', see the next exception for details.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 19 more
+Caused by: java.sql.SQLException: Another instance of Derby may have already booted the database L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\aptanaDB.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	... 16 more
+Caused by: ERROR XSDB6: Another instance of Derby may have already booted the database L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\aptanaDB.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.privGetJBMSLockOnDB(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.getJBMSLockOnDB(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.store.raw.RawStore.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
+	... 16 more
+
+!ENTRY com.aptana.usage 4 0 2011-08-04 10:55:00.121
+!MESSAGE Unable to connect to database
+!STACK 0
+java.sql.SQLException: Failed to start database 'aptanaDB', see the next exception for details.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at com.aptana.usage.AptanaDB.getConnection(AptanaDB.java:151)
+	at com.aptana.usage.AptanaDB.execute(AptanaDB.java:74)
+	at com.aptana.usage.AptanaDB.execute(AptanaDB.java:69)
+	at com.aptana.usage.EventLogger.getInstance(EventLogger.java:49)
+	at com.aptana.usage.PingStartup.updateAnonymousId(PingStartup.java:115)
+	at com.aptana.usage.PingStartup.access$0(PingStartup.java:87)
+	at com.aptana.usage.PingStartup$1.run(PingStartup.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.sql.SQLException: Failed to start database 'aptanaDB', see the next exception for details.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 20 more
+Caused by: java.sql.SQLException: Another instance of Derby may have already booted the database L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\aptanaDB.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	... 17 more
+Caused by: ERROR XSDB6: Another instance of Derby may have already booted the database L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\aptanaDB.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.privGetJBMSLockOnDB(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.getJBMSLockOnDB(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.store.raw.RawStore.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
+	... 17 more
+
+!ENTRY com.aptana.usage 4 0 2011-08-04 10:55:00.323
+!MESSAGE Unable to connect to database
+!STACK 0
+java.sql.SQLException: Failed to start database 'aptanaDB', see the next exception for details.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at com.aptana.usage.AptanaDB.getConnection(AptanaDB.java:151)
+	at com.aptana.usage.AptanaDB.execute(AptanaDB.java:74)
+	at com.aptana.usage.AptanaDB.execute(AptanaDB.java:69)
+	at com.aptana.usage.EventLogger.logEvent(EventLogger.java:69)
+	at com.aptana.usage.EventLogger.logEvent(EventLogger.java:57)
+	at com.aptana.usage.PingStartup.updateAnonymousId(PingStartup.java:115)
+	at com.aptana.usage.PingStartup.access$0(PingStartup.java:87)
+	at com.aptana.usage.PingStartup$1.run(PingStartup.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.sql.SQLException: Failed to start database 'aptanaDB', see the next exception for details.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 21 more
+Caused by: java.sql.SQLException: Another instance of Derby may have already booted the database L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\aptanaDB.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	... 18 more
+Caused by: ERROR XSDB6: Another instance of Derby may have already booted the database L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\aptanaDB.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.privGetJBMSLockOnDB(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.getJBMSLockOnDB(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.store.raw.RawStore.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
+	... 18 more
+
+!ENTRY com.aptana.usage 4 0 2011-08-04 10:55:01.106
+!MESSAGE Unable to connect to database
+!STACK 0
+java.sql.SQLException: Failed to start database 'aptanaDB', see the next exception for details.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at com.aptana.usage.AptanaDB.getConnection(AptanaDB.java:151)
+	at com.aptana.usage.AptanaDB.execute(AptanaDB.java:74)
+	at com.aptana.usage.EventLogger.getEvents(EventLogger.java:103)
+	at com.aptana.usage.PingStartup.updateAnonymousId(PingStartup.java:118)
+	at com.aptana.usage.PingStartup.access$0(PingStartup.java:87)
+	at com.aptana.usage.PingStartup$1.run(PingStartup.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.sql.SQLException: Failed to start database 'aptanaDB', see the next exception for details.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 19 more
+Caused by: java.sql.SQLException: Another instance of Derby may have already booted the database L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\aptanaDB.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	... 16 more
+Caused by: ERROR XSDB6: Another instance of Derby may have already booted the database L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\aptanaDB.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.privGetJBMSLockOnDB(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.getJBMSLockOnDB(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.store.raw.RawStore.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
+	... 16 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-08-04 10:55:01.734
+!MESSAGE An internal error occurred during: "Loading bundle: L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\org.eclipse.osgi\bundles\600\1\.cp\bundles\bundle-development.ruble".
+!STACK 0
+org.jruby.embed.EvalFailedException: (LoadError) no such file to load -- ruble/ui
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.aptana.scripting.ScriptingEngine.createScriptingContainer(ScriptingEngine.java:98)
+	at com.aptana.scripting.ScriptingEngine.getScriptingContainer(ScriptingEngine.java:238)
+	at com.aptana.scripting.model.ScriptLoadJob.run(ScriptLoadJob.java:74)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:144)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:180)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:282)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:251)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1907)
+	at com.aptana.scripting.model.BundleManager$BundleLoadJob.run(BundleManager.java:122)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.jruby.exceptions.RaiseException: (LoadError) no such file to load -- ruble/ui
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-08-04 10:55:01.866
+!MESSAGE An internal error occurred during: "Loading bundle: L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\org.eclipse.osgi\bundles\600\1\.cp\bundles\capistrano.ruble".
+!STACK 0
+org.jruby.embed.EvalFailedException: (LoadError) no such file to load -- ruble/ui
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.aptana.scripting.ScriptingEngine.createScriptingContainer(ScriptingEngine.java:98)
+	at com.aptana.scripting.ScriptingEngine.getScriptingContainer(ScriptingEngine.java:238)
+	at com.aptana.scripting.model.ScriptLoadJob.run(ScriptLoadJob.java:74)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:144)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:180)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:282)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:251)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1907)
+	at com.aptana.scripting.model.BundleManager$BundleLoadJob.run(BundleManager.java:122)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.jruby.exceptions.RaiseException: (LoadError) no such file to load -- ruble/ui
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-08-04 10:55:01.965
+!MESSAGE An internal error occurred during: "Loading bundle: L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\org.eclipse.osgi\bundles\600\1\.cp\bundles\cucumber.ruble".
+!STACK 0
+org.jruby.embed.EvalFailedException: (LoadError) no such file to load -- ruble/ui
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.aptana.scripting.ScriptingEngine.createScriptingContainer(ScriptingEngine.java:98)
+	at com.aptana.scripting.ScriptingEngine.getScriptingContainer(ScriptingEngine.java:238)
+	at com.aptana.scripting.model.ScriptLoadJob.run(ScriptLoadJob.java:74)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:144)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:180)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:282)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:251)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1907)
+	at com.aptana.scripting.model.BundleManager$BundleLoadJob.run(BundleManager.java:122)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.jruby.exceptions.RaiseException: (LoadError) no such file to load -- ruble/ui
+
+!ENTRY com.aptana.usage 4 0 2011-08-04 10:55:02.696
+!MESSAGE Unable to connect to database
+!STACK 0
+java.sql.SQLException: Failed to start database 'aptanaDB', see the next exception for details.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at com.aptana.usage.AptanaDB.getConnection(AptanaDB.java:151)
+	at com.aptana.usage.AptanaDB.execute(AptanaDB.java:74)
+	at com.aptana.usage.AptanaDB.execute(AptanaDB.java:69)
+	at com.aptana.usage.EventLogger.clearEvents(EventLogger.java:75)
+	at com.aptana.usage.PingStartup.updateAnonymousId(PingStartup.java:138)
+	at com.aptana.usage.PingStartup.access$0(PingStartup.java:87)
+	at com.aptana.usage.PingStartup$1.run(PingStartup.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.sql.SQLException: Failed to start database 'aptanaDB', see the next exception for details.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 20 more
+Caused by: java.sql.SQLException: Another instance of Derby may have already booted the database L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\aptanaDB.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	... 17 more
+Caused by: ERROR XSDB6: Another instance of Derby may have already booted the database L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\aptanaDB.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.privGetJBMSLockOnDB(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.getJBMSLockOnDB(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.store.raw.RawStore.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
+	... 17 more
+
+!ENTRY com.aptana.scripting 4 0 2011-08-04 10:55:03.397
+!MESSAGE (LoadError) no such file to load -- ruble/ui
+!STACK 0
+org.jruby.embed.EvalFailedException: (LoadError) no such file to load -- ruble/ui
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.aptana.scripting.ScriptingEngine.createScriptingContainer(ScriptingEngine.java:98)
+	at com.aptana.scripting.ScriptingEngine.getScriptingContainer(ScriptingEngine.java:238)
+	at com.aptana.scripting.model.ScriptLoadJob.run(ScriptLoadJob.java:74)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:144)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:180)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:282)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:251)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1907)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1869)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1845)
+	at com.aptana.scripting.model.BundleCacher$LazyCommandElement.lazyLoad(BundleCacher.java:916)
+	at com.aptana.scripting.model.BundleCacher$LazyCommandElement.getInvoke(BundleCacher.java:846)
+	at com.aptana.scripting.model.CommandElement.printBody(CommandElement.java:693)
+	at com.aptana.scripting.model.AbstractElement.toSource(AbstractElement.java:390)
+	at com.aptana.scripting.model.BundleElement.printBody(BundleElement.java:794)
+	at com.aptana.scripting.model.AbstractElement.toSource(AbstractElement.java:390)
+	at com.aptana.scripting.model.AbstractElement.toSource(AbstractElement.java:373)
+	at com.aptana.scripting.model.AbstractElement.toString(AbstractElement.java:416)
+	at java.lang.String.valueOf(Unknown Source)
+	at java.lang.StringBuilder.append(Unknown Source)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.constructJavaBean2ndStep(Constructor.java:290)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.construct2ndStep(Constructor.java:191)
+	at com.aptana.scripting.model.BundleCacher$BundleElementsConstructor$ConstructBundleElement.construct(BundleCacher.java:650)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:181)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:140)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getSingleData(BaseConstructor.java:126)
+	at org.yaml.snakeyaml.Yaml.loadFromReader(Yaml.java:296)
+	at org.yaml.snakeyaml.Yaml.load(Yaml.java:290)
+	at com.aptana.scripting.model.BundleCacher.load(BundleCacher.java:212)
+	at com.aptana.scripting.model.BundleManager$BundleLoadJob.run(BundleManager.java:104)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.jruby.exceptions.RaiseException: (LoadError) no such file to load -- ruble/ui
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-08-04 10:55:03.528
+!MESSAGE An internal error occurred during: "Loading bundle: L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\org.eclipse.osgi\bundles\600\1\.cp\bundles\haml.ruble".
+!STACK 0
+org.jruby.embed.EvalFailedException: (LoadError) no such file to load -- ruble/ui
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.aptana.scripting.ScriptingEngine.createScriptingContainer(ScriptingEngine.java:98)
+	at com.aptana.scripting.ScriptingEngine.getScriptingContainer(ScriptingEngine.java:238)
+	at com.aptana.scripting.model.ScriptLoadJob.run(ScriptLoadJob.java:74)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:144)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:180)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:282)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:251)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1907)
+	at com.aptana.scripting.model.BundleManager$BundleLoadJob.run(BundleManager.java:122)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.jruby.exceptions.RaiseException: (LoadError) no such file to load -- ruble/ui
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-08-04 10:55:03.731
+!MESSAGE An internal error occurred during: "Loading bundle: L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\org.eclipse.osgi\bundles\600\1\.cp\bundles\html.ruble".
+!STACK 0
+org.jruby.embed.EvalFailedException: (LoadError) no such file to load -- ruble/ui
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.aptana.scripting.ScriptingEngine.createScriptingContainer(ScriptingEngine.java:98)
+	at com.aptana.scripting.ScriptingEngine.getScriptingContainer(ScriptingEngine.java:238)
+	at com.aptana.scripting.model.ScriptLoadJob.run(ScriptLoadJob.java:74)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:144)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:180)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:282)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:251)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1907)
+	at com.aptana.scripting.model.BundleManager$BundleLoadJob.run(BundleManager.java:122)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.jruby.exceptions.RaiseException: (LoadError) no such file to load -- ruble/ui
+
+!ENTRY com.aptana.scripting 4 0 2011-08-04 10:55:03.810
+!MESSAGE (LoadError) no such file to load -- ruble/ui
+!STACK 0
+org.jruby.embed.EvalFailedException: (LoadError) no such file to load -- ruble/ui
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.aptana.scripting.ScriptingEngine.createScriptingContainer(ScriptingEngine.java:98)
+	at com.aptana.scripting.ScriptingEngine.getScriptingContainer(ScriptingEngine.java:238)
+	at com.aptana.scripting.model.ScriptLoadJob.run(ScriptLoadJob.java:74)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:144)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:180)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:282)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:251)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1907)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1869)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1845)
+	at com.aptana.scripting.model.BundleCacher$LazyCommandElement.lazyLoad(BundleCacher.java:916)
+	at com.aptana.scripting.model.BundleCacher$LazyCommandElement.getInvoke(BundleCacher.java:846)
+	at com.aptana.scripting.model.CommandElement.printBody(CommandElement.java:693)
+	at com.aptana.scripting.model.AbstractElement.toSource(AbstractElement.java:390)
+	at com.aptana.scripting.model.BundleElement.printBody(BundleElement.java:794)
+	at com.aptana.scripting.model.AbstractElement.toSource(AbstractElement.java:390)
+	at com.aptana.scripting.model.AbstractElement.toSource(AbstractElement.java:373)
+	at com.aptana.scripting.model.AbstractElement.toString(AbstractElement.java:416)
+	at java.lang.String.valueOf(Unknown Source)
+	at java.lang.StringBuilder.append(Unknown Source)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.constructJavaBean2ndStep(Constructor.java:290)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.construct2ndStep(Constructor.java:191)
+	at com.aptana.scripting.model.BundleCacher$BundleElementsConstructor$ConstructBundleElement.construct(BundleCacher.java:650)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:181)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:140)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getSingleData(BaseConstructor.java:126)
+	at org.yaml.snakeyaml.Yaml.loadFromReader(Yaml.java:296)
+	at org.yaml.snakeyaml.Yaml.load(Yaml.java:290)
+	at com.aptana.scripting.model.BundleCacher.load(BundleCacher.java:212)
+	at com.aptana.scripting.model.BundleManager$BundleLoadJob.run(BundleManager.java:104)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.jruby.exceptions.RaiseException: (LoadError) no such file to load -- ruble/ui
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-08-04 10:55:03.939
+!MESSAGE An internal error occurred during: "Loading bundle: L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\org.eclipse.osgi\bundles\600\1\.cp\bundles\css.ruble".
+!STACK 0
+org.jruby.embed.EvalFailedException: (LoadError) no such file to load -- ruble/ui
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.aptana.scripting.ScriptingEngine.createScriptingContainer(ScriptingEngine.java:98)
+	at com.aptana.scripting.ScriptingEngine.getScriptingContainer(ScriptingEngine.java:238)
+	at com.aptana.scripting.model.ScriptLoadJob.run(ScriptLoadJob.java:74)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:144)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:180)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:282)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:251)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1907)
+	at com.aptana.scripting.model.BundleManager$BundleLoadJob.run(BundleManager.java:122)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.jruby.exceptions.RaiseException: (LoadError) no such file to load -- ruble/ui
+
+!ENTRY com.aptana.scripting 4 0 2011-08-04 10:55:04.188
+!MESSAGE (LoadError) no such file to load -- ruble/ui
+!STACK 0
+org.jruby.embed.EvalFailedException: (LoadError) no such file to load -- ruble/ui
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.aptana.scripting.ScriptingEngine.createScriptingContainer(ScriptingEngine.java:98)
+	at com.aptana.scripting.ScriptingEngine.getScriptingContainer(ScriptingEngine.java:238)
+	at com.aptana.scripting.model.ScriptLoadJob.run(ScriptLoadJob.java:74)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:144)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:180)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:282)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:251)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1907)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1869)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1845)
+	at com.aptana.scripting.model.BundleCacher$LazyCommandElement.lazyLoad(BundleCacher.java:916)
+	at com.aptana.scripting.model.BundleCacher$LazyCommandElement.getInvoke(BundleCacher.java:846)
+	at com.aptana.scripting.model.CommandElement.printBody(CommandElement.java:693)
+	at com.aptana.scripting.model.AbstractElement.toSource(AbstractElement.java:390)
+	at com.aptana.scripting.model.BundleElement.printBody(BundleElement.java:794)
+	at com.aptana.scripting.model.AbstractElement.toSource(AbstractElement.java:390)
+	at com.aptana.scripting.model.AbstractElement.toSource(AbstractElement.java:373)
+	at com.aptana.scripting.model.AbstractElement.toString(AbstractElement.java:416)
+	at java.lang.String.valueOf(Unknown Source)
+	at java.lang.StringBuilder.append(Unknown Source)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.constructJavaBean2ndStep(Constructor.java:290)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.construct2ndStep(Constructor.java:191)
+	at com.aptana.scripting.model.BundleCacher$BundleElementsConstructor$ConstructBundleElement.construct(BundleCacher.java:650)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:181)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:140)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getSingleData(BaseConstructor.java:126)
+	at org.yaml.snakeyaml.Yaml.loadFromReader(Yaml.java:296)
+	at org.yaml.snakeyaml.Yaml.load(Yaml.java:290)
+	at com.aptana.scripting.model.BundleCacher.load(BundleCacher.java:212)
+	at com.aptana.scripting.model.BundleManager$BundleLoadJob.run(BundleManager.java:104)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.jruby.exceptions.RaiseException: (LoadError) no such file to load -- ruble/ui
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-08-04 10:55:04.397
+!MESSAGE An internal error occurred during: "Loading bundle: L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\org.eclipse.osgi\bundles\600\1\.cp\bundles\php.ruble".
+!STACK 0
+org.jruby.embed.EvalFailedException: (LoadError) no such file to load -- ruble/ui
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.aptana.scripting.ScriptingEngine.createScriptingContainer(ScriptingEngine.java:98)
+	at com.aptana.scripting.ScriptingEngine.getScriptingContainer(ScriptingEngine.java:238)
+	at com.aptana.scripting.model.ScriptLoadJob.run(ScriptLoadJob.java:74)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:144)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:180)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:282)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:251)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1907)
+	at com.aptana.scripting.model.BundleManager$BundleLoadJob.run(BundleManager.java:122)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.jruby.exceptions.RaiseException: (LoadError) no such file to load -- ruble/ui
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-08-04 10:55:04.558
+!MESSAGE An internal error occurred during: "Loading bundle: L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\org.eclipse.osgi\bundles\600\1\.cp\bundles\rspec.ruble".
+!STACK 0
+org.jruby.embed.EvalFailedException: (LoadError) no such file to load -- ruble/ui
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.aptana.scripting.ScriptingEngine.createScriptingContainer(ScriptingEngine.java:98)
+	at com.aptana.scripting.ScriptingEngine.getScriptingContainer(ScriptingEngine.java:238)
+	at com.aptana.scripting.model.ScriptLoadJob.run(ScriptLoadJob.java:74)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:144)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:180)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:282)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:251)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1907)
+	at com.aptana.scripting.model.BundleManager$BundleLoadJob.run(BundleManager.java:122)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.jruby.exceptions.RaiseException: (LoadError) no such file to load -- ruble/ui
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-08-04 10:55:04.809
+!MESSAGE An internal error occurred during: "Loading bundle: L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\org.eclipse.osgi\bundles\600\1\.cp\bundles\sass.ruble".
+!STACK 0
+org.jruby.embed.EvalFailedException: (LoadError) no such file to load -- ruble/ui
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.aptana.scripting.ScriptingEngine.createScriptingContainer(ScriptingEngine.java:98)
+	at com.aptana.scripting.ScriptingEngine.getScriptingContainer(ScriptingEngine.java:238)
+	at com.aptana.scripting.model.ScriptLoadJob.run(ScriptLoadJob.java:74)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:144)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:180)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:282)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:251)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1907)
+	at com.aptana.scripting.model.BundleManager$BundleLoadJob.run(BundleManager.java:122)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.jruby.exceptions.RaiseException: (LoadError) no such file to load -- ruble/ui
+
+!ENTRY com.aptana.scripting 4 0 2011-08-04 10:55:04.875
+!MESSAGE (LoadError) no such file to load -- ruble/ui
+!STACK 0
+org.jruby.embed.EvalFailedException: (LoadError) no such file to load -- ruble/ui
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.aptana.scripting.ScriptingEngine.createScriptingContainer(ScriptingEngine.java:98)
+	at com.aptana.scripting.ScriptingEngine.getScriptingContainer(ScriptingEngine.java:238)
+	at com.aptana.scripting.model.ScriptLoadJob.run(ScriptLoadJob.java:74)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:144)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:180)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:282)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:251)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1907)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1869)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1845)
+	at com.aptana.scripting.model.BundleCacher$LazyCommandElement.lazyLoad(BundleCacher.java:916)
+	at com.aptana.scripting.model.BundleCacher$LazyCommandElement.getInvoke(BundleCacher.java:846)
+	at com.aptana.scripting.model.CommandElement.printBody(CommandElement.java:693)
+	at com.aptana.scripting.model.AbstractElement.toSource(AbstractElement.java:390)
+	at com.aptana.scripting.model.BundleElement.printBody(BundleElement.java:794)
+	at com.aptana.scripting.model.AbstractElement.toSource(AbstractElement.java:390)
+	at com.aptana.scripting.model.AbstractElement.toSource(AbstractElement.java:373)
+	at com.aptana.scripting.model.AbstractElement.toString(AbstractElement.java:416)
+	at java.lang.String.valueOf(Unknown Source)
+	at java.lang.StringBuilder.append(Unknown Source)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.constructJavaBean2ndStep(Constructor.java:290)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.construct2ndStep(Constructor.java:191)
+	at com.aptana.scripting.model.BundleCacher$BundleElementsConstructor$ConstructBundleElement.construct(BundleCacher.java:650)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:181)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:140)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getSingleData(BaseConstructor.java:126)
+	at org.yaml.snakeyaml.Yaml.loadFromReader(Yaml.java:296)
+	at org.yaml.snakeyaml.Yaml.load(Yaml.java:290)
+	at com.aptana.scripting.model.BundleCacher.load(BundleCacher.java:212)
+	at com.aptana.scripting.model.BundleManager$BundleLoadJob.run(BundleManager.java:104)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.jruby.exceptions.RaiseException: (LoadError) no such file to load -- ruble/ui
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-08-04 10:55:05.175
+!MESSAGE An internal error occurred during: "Loading bundle: L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\org.eclipse.osgi\bundles\600\1\.cp\bundles\js.ruble".
+!STACK 0
+org.jruby.embed.EvalFailedException: (LoadError) no such file to load -- ruble/ui
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.aptana.scripting.ScriptingEngine.createScriptingContainer(ScriptingEngine.java:98)
+	at com.aptana.scripting.ScriptingEngine.getScriptingContainer(ScriptingEngine.java:238)
+	at com.aptana.scripting.model.ScriptLoadJob.run(ScriptLoadJob.java:74)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:144)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:180)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:282)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:251)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1907)
+	at com.aptana.scripting.model.BundleManager$BundleLoadJob.run(BundleManager.java:122)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.jruby.exceptions.RaiseException: (LoadError) no such file to load -- ruble/ui
+
+!ENTRY com.aptana.scripting 4 0 2011-08-04 10:55:05.355
+!MESSAGE (LoadError) no such file to load -- ruble/ui
+!STACK 0
+org.jruby.embed.EvalFailedException: (LoadError) no such file to load -- ruble/ui
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.aptana.scripting.ScriptingEngine.createScriptingContainer(ScriptingEngine.java:98)
+	at com.aptana.scripting.ScriptingEngine.getScriptingContainer(ScriptingEngine.java:238)
+	at com.aptana.scripting.model.ScriptLoadJob.run(ScriptLoadJob.java:74)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:144)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:180)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:282)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:251)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1907)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1869)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1845)
+	at com.aptana.scripting.model.BundleCacher$LazyCommandElement.lazyLoad(BundleCacher.java:916)
+	at com.aptana.scripting.model.BundleCacher$LazyCommandElement.getInvoke(BundleCacher.java:846)
+	at com.aptana.scripting.model.CommandElement.printBody(CommandElement.java:693)
+	at com.aptana.scripting.model.AbstractElement.toSource(AbstractElement.java:390)
+	at com.aptana.scripting.model.BundleElement.printBody(BundleElement.java:794)
+	at com.aptana.scripting.model.AbstractElement.toSource(AbstractElement.java:390)
+	at com.aptana.scripting.model.AbstractElement.toSource(AbstractElement.java:373)
+	at com.aptana.scripting.model.AbstractElement.toString(AbstractElement.java:416)
+	at java.lang.String.valueOf(Unknown Source)
+	at java.lang.StringBuilder.append(Unknown Source)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.constructJavaBean2ndStep(Constructor.java:290)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.construct2ndStep(Constructor.java:191)
+	at com.aptana.scripting.model.BundleCacher$BundleElementsConstructor$ConstructBundleElement.construct(BundleCacher.java:650)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:181)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:140)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getSingleData(BaseConstructor.java:126)
+	at org.yaml.snakeyaml.Yaml.loadFromReader(Yaml.java:296)
+	at org.yaml.snakeyaml.Yaml.load(Yaml.java:290)
+	at com.aptana.scripting.model.BundleCacher.load(BundleCacher.java:212)
+	at com.aptana.scripting.model.BundleManager$BundleLoadJob.run(BundleManager.java:104)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.jruby.exceptions.RaiseException: (LoadError) no such file to load -- ruble/ui
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-08-04 10:55:05.522
+!MESSAGE An internal error occurred during: "Loading bundle: L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\org.eclipse.osgi\bundles\600\1\.cp\bundles\xml.ruble".
+!STACK 0
+org.jruby.embed.EvalFailedException: (LoadError) no such file to load -- ruble/ui
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.aptana.scripting.ScriptingEngine.createScriptingContainer(ScriptingEngine.java:98)
+	at com.aptana.scripting.ScriptingEngine.getScriptingContainer(ScriptingEngine.java:238)
+	at com.aptana.scripting.model.ScriptLoadJob.run(ScriptLoadJob.java:74)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:144)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:180)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:282)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:251)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1907)
+	at com.aptana.scripting.model.BundleManager$BundleLoadJob.run(BundleManager.java:122)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.jruby.exceptions.RaiseException: (LoadError) no such file to load -- ruble/ui
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-08-04 10:55:05.617
+!MESSAGE An internal error occurred during: "Loading bundle: L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\org.eclipse.osgi\bundles\600\1\.cp\bundles\rails.ruble".
+!STACK 0
+org.jruby.embed.EvalFailedException: (LoadError) no such file to load -- ruble/ui
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.aptana.scripting.ScriptingEngine.createScriptingContainer(ScriptingEngine.java:98)
+	at com.aptana.scripting.ScriptingEngine.getScriptingContainer(ScriptingEngine.java:238)
+	at com.aptana.scripting.model.ScriptLoadJob.run(ScriptLoadJob.java:74)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:144)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:180)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:282)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:251)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1907)
+	at com.aptana.scripting.model.BundleManager$BundleLoadJob.run(BundleManager.java:122)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.jruby.exceptions.RaiseException: (LoadError) no such file to load -- ruble/ui
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-08-04 10:55:05.736
+!MESSAGE An internal error occurred during: "Loading bundle: L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\org.eclipse.osgi\bundles\600\1\.cp\bundles\ruby.ruble".
+!STACK 0
+org.jruby.embed.EvalFailedException: (LoadError) no such file to load -- ruble/ui
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.aptana.scripting.ScriptingEngine.createScriptingContainer(ScriptingEngine.java:98)
+	at com.aptana.scripting.ScriptingEngine.getScriptingContainer(ScriptingEngine.java:238)
+	at com.aptana.scripting.model.ScriptLoadJob.run(ScriptLoadJob.java:74)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:144)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:180)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:282)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:251)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1907)
+	at com.aptana.scripting.model.BundleManager$BundleLoadJob.run(BundleManager.java:122)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.jruby.exceptions.RaiseException: (LoadError) no such file to load -- ruble/ui
+
+!ENTRY com.aptana.scripting 4 0 2011-08-04 10:55:05.997
+!MESSAGE (LoadError) no such file to load -- ruble/ui
+!STACK 0
+org.jruby.embed.EvalFailedException: (LoadError) no such file to load -- ruble/ui
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.aptana.scripting.ScriptingEngine.createScriptingContainer(ScriptingEngine.java:98)
+	at com.aptana.scripting.ScriptingEngine.getScriptingContainer(ScriptingEngine.java:238)
+	at com.aptana.scripting.model.ScriptLoadJob.run(ScriptLoadJob.java:74)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:144)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:180)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:282)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:251)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1907)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1869)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1845)
+	at com.aptana.scripting.model.BundleCacher$LazyCommandElement.lazyLoad(BundleCacher.java:916)
+	at com.aptana.scripting.model.BundleCacher$LazyCommandElement.getInvoke(BundleCacher.java:846)
+	at com.aptana.scripting.model.CommandElement.printBody(CommandElement.java:693)
+	at com.aptana.scripting.model.AbstractElement.toSource(AbstractElement.java:390)
+	at com.aptana.scripting.model.BundleElement.printBody(BundleElement.java:794)
+	at com.aptana.scripting.model.AbstractElement.toSource(AbstractElement.java:390)
+	at com.aptana.scripting.model.AbstractElement.toSource(AbstractElement.java:373)
+	at com.aptana.scripting.model.AbstractElement.toString(AbstractElement.java:416)
+	at java.lang.String.valueOf(Unknown Source)
+	at java.lang.StringBuilder.append(Unknown Source)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.constructJavaBean2ndStep(Constructor.java:290)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.construct2ndStep(Constructor.java:191)
+	at com.aptana.scripting.model.BundleCacher$BundleElementsConstructor$ConstructBundleElement.construct(BundleCacher.java:650)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:181)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:140)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getSingleData(BaseConstructor.java:126)
+	at org.yaml.snakeyaml.Yaml.loadFromReader(Yaml.java:296)
+	at org.yaml.snakeyaml.Yaml.load(Yaml.java:290)
+	at com.aptana.scripting.model.BundleCacher.load(BundleCacher.java:212)
+	at com.aptana.scripting.model.BundleManager$BundleLoadJob.run(BundleManager.java:104)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.jruby.exceptions.RaiseException: (LoadError) no such file to load -- ruble/ui
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-08-04 10:55:06.164
+!MESSAGE An internal error occurred during: "Loading bundle: L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\org.eclipse.osgi\bundles\600\1\.cp\bundles\shell-script.ruble".
+!STACK 0
+org.jruby.embed.EvalFailedException: (LoadError) no such file to load -- ruble/ui
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.aptana.scripting.ScriptingEngine.createScriptingContainer(ScriptingEngine.java:98)
+	at com.aptana.scripting.ScriptingEngine.getScriptingContainer(ScriptingEngine.java:238)
+	at com.aptana.scripting.model.ScriptLoadJob.run(ScriptLoadJob.java:74)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:144)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:180)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:282)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:251)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1907)
+	at com.aptana.scripting.model.BundleManager$BundleLoadJob.run(BundleManager.java:122)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.jruby.exceptions.RaiseException: (LoadError) no such file to load -- ruble/ui
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-08-04 10:55:06.372
+!MESSAGE An internal error occurred during: "Loading bundle: L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\org.eclipse.osgi\bundles\600\1\.cp\bundles\text.ruble".
+!STACK 0
+org.jruby.embed.EvalFailedException: (LoadError) no such file to load -- ruble/ui
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.aptana.scripting.ScriptingEngine.createScriptingContainer(ScriptingEngine.java:98)
+	at com.aptana.scripting.ScriptingEngine.getScriptingContainer(ScriptingEngine.java:238)
+	at com.aptana.scripting.model.ScriptLoadJob.run(ScriptLoadJob.java:74)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:144)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:180)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:282)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:251)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1907)
+	at com.aptana.scripting.model.BundleManager$BundleLoadJob.run(BundleManager.java:122)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.jruby.exceptions.RaiseException: (LoadError) no such file to load -- ruble/ui
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-08-04 10:55:06.496
+!MESSAGE An internal error occurred during: "Loading bundle: L:\Downloads\eclipse-java-helios-SR1-win32\eclipse\configuration\org.eclipse.osgi\bundles\600\1\.cp\bundles\yaml.ruble".
+!STACK 0
+org.jruby.embed.EvalFailedException: (LoadError) no such file to load -- ruble/ui
+	at org.jruby.embed.internal.EmbedEvalUnitImpl.run(EmbedEvalUnitImpl.java:127)
+	at org.jruby.embed.ScriptingContainer.runUnit(ScriptingContainer.java:1231)
+	at org.jruby.embed.ScriptingContainer.runScriptlet(ScriptingContainer.java:1224)
+	at com.aptana.scripting.ScriptingEngine.createScriptingContainer(ScriptingEngine.java:98)
+	at com.aptana.scripting.ScriptingEngine.getScriptingContainer(ScriptingEngine.java:238)
+	at com.aptana.scripting.model.ScriptLoadJob.run(ScriptLoadJob.java:74)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:144)
+	at com.aptana.scripting.model.AbstractScriptRunner.run(AbstractScriptRunner.java:180)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:282)
+	at com.aptana.scripting.ScriptingEngine.runScript(ScriptingEngine.java:251)
+	at com.aptana.scripting.model.BundleManager.loadScript(BundleManager.java:1907)
+	at com.aptana.scripting.model.BundleManager$BundleLoadJob.run(BundleManager.java:122)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.jruby.exceptions.RaiseException: (LoadError) no such file to load -- ruble/ui
+
+!ENTRY com.aptana.usage 4 0 2011-08-04 10:55:23.207
+!MESSAGE An error occurred while shutting down the database
+!STACK 0
+java.sql.SQLException: Database 'aptanaDB' not found.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at com.aptana.usage.AptanaDB.shutdown(AptanaDB.java:172)
+	at com.aptana.usage.UsagePlugin.stop(UsagePlugin.java:56)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:843)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:836)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:501)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:550)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1097)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:597)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:266)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:690)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:588)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:415)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:619)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:574)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1407)
+Caused by: java.sql.SQLException: Database 'aptanaDB' not found.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 37 more

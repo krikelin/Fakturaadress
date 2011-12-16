@@ -1,0 +1,85 @@
+﻿<%@ Page Title="Lägg till banner" Language="C#" MasterPageFile="~/Admin.master" AutoEventWireup="true" CodeFile="AddBannerd.aspx.cs" Inherits="Admin_AddBanner" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent2" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent2" Runat="Server">
+
+   
+        
+           
+           
+               
+    Lägg till Annons<br />
+   
+        
+   
+        <br />
+   
+        
+   
+        <table ID="Table1" Height="81px" Width="609px" 
+            style="margin-right: 0px">
+            <tr>
+                <td>
+                  <span class="tbAltText">Starttid</span>
+                </td><td>
+                 <asp:Calendar ID="StartTime" runat="server">
+                 </asp:Calendar>
+                </td></tr><tr>
+                <td>
+                  <span class="tbAltText">Starttid</span>
+                </td>
+                <td>
+                    <asp:Calendar ID="EndTime" runat="server">
+                    </asp:Calendar>
+                </td>
+             </tr>
+            <tr ID="tr1" runat="server">
+                <td>
+                    <span>Namn</span>
+                </td>
+                <td>
+                    <asp:TextBox ID="tbName" CssClass="item" runat=server />
+                        
+                  
+                </td></tr><tr ID="tr2" runat="server">
+                <td>
+                    <span>Beskrivning</span>
+                </td><td>
+                    <asp:TextBox ID="tbText" CssClass="item" runat="server" />
+                        
+                  
+                </td></tr><tr ID="tr3" runat="server">
+                <td>
+                    <span >Bild</span>
+                </td><td> 
+                    <asp:FileUpload ID="FileUpload1" runat="server" />
+                </td></tr><tr ID="tr4" runat="server">
+                <td>
+                    <span class="tbLink">Länk</span>
+                </td><td> 
+                    <asp:TextBox ID="tbLink" runat="server"/>
+                </td></tr><tr ID="tr5" runat="server">
+                <td>
+                    <span class="tbLink">Nyckelord</span>
+                </td><td> 
+                    <asp:TextBox ID="tbKeywords" runat="server"/>
+                </td></tr><tr ID="tr6" runat="server">
+                <td>
+                    <span class="tbAltText">Alternativ text</span>
+                </td><td> 
+                    <asp:TextBox ID="tbAltText" runat="server"/>
+                </td></tr>
+                <tr>
+                    <td colspan="2">
+                        <asp:Button ID="Button1" runat="server" Text="Lägg till" 
+                            oncommand="Button1_Command" />
+                    
+                 </td>
+               </tr>
+            </table>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+
+ 
+</asp:Content>
+

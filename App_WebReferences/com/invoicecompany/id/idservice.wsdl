@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://invoicecompany.se/idservice/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://invoicecompany.se/idservice/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://invoicecompany.se/idservice/">
+      <s:element name="IdentifyPerson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SSN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IdentifyPersonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IdentifyPersonResult" type="tns:ArrayOfPerson" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPerson">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Person" nillable="true" type="tns:Person" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Person">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Result">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ResultID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ResultRow" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="IdentityCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ZipCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Town" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Result">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Error" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="IdentifyCompany">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrgNO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IdentifyCompanyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IdentifyCompanyResult" type="tns:ArrayOfCompany" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCompany">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Company" nillable="true" type="tns:Company" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Company">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Result">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ResultID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ResultRow" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="IdentityCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ZipCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Town" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvoiceAddress" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvoiceZipCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvoiceTown" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReminderAddress" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReminderZipCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReminderTown" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvoiceReference" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Appendix" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="IdentifyPersonWithoutSSN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SSN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zipCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="city" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phoneticSearch" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IdentifyPersonWithoutSSNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IdentifyPersonWithoutSSNResult" type="tns:ArrayOfPerson" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IdentifyCompanyWithoutOrgNO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrgNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zipCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="city" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phoneticSearch" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IdentifyCompanyWithoutOrgNOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IdentifyCompanyWithoutOrgNOResult" type="tns:ArrayOfCompany" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSelectedCompany">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResultId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSelectedCompanyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSelectedCompanyResult" type="tns:ArrayOfCompany" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSelectedPerson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResultId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSelectedPersonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSelectedPersonResult" type="tns:ArrayOfPerson" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IdentifyPersonSoapIn">
+    <wsdl:part name="parameters" element="tns:IdentifyPerson" />
+  </wsdl:message>
+  <wsdl:message name="IdentifyPersonSoapOut">
+    <wsdl:part name="parameters" element="tns:IdentifyPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IdentifyCompanySoapIn">
+    <wsdl:part name="parameters" element="tns:IdentifyCompany" />
+  </wsdl:message>
+  <wsdl:message name="IdentifyCompanySoapOut">
+    <wsdl:part name="parameters" element="tns:IdentifyCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IdentifyPersonWithoutSSNSoapIn">
+    <wsdl:part name="parameters" element="tns:IdentifyPersonWithoutSSN" />
+  </wsdl:message>
+  <wsdl:message name="IdentifyPersonWithoutSSNSoapOut">
+    <wsdl:part name="parameters" element="tns:IdentifyPersonWithoutSSNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IdentifyCompanyWithoutOrgNOSoapIn">
+    <wsdl:part name="parameters" element="tns:IdentifyCompanyWithoutOrgNO" />
+  </wsdl:message>
+  <wsdl:message name="IdentifyCompanyWithoutOrgNOSoapOut">
+    <wsdl:part name="parameters" element="tns:IdentifyCompanyWithoutOrgNOResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSelectedCompanySoapIn">
+    <wsdl:part name="parameters" element="tns:GetSelectedCompany" />
+  </wsdl:message>
+  <wsdl:message name="GetSelectedCompanySoapOut">
+    <wsdl:part name="parameters" element="tns:GetSelectedCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSelectedPersonSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSelectedPerson" />
+  </wsdl:message>
+  <wsdl:message name="GetSelectedPersonSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSelectedPersonResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDServiceSoap">
+    <wsdl:operation name="IdentifyPerson">
+      <wsdl:input message="tns:IdentifyPersonSoapIn" />
+      <wsdl:output message="tns:IdentifyPersonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IdentifyCompany">
+      <wsdl:input message="tns:IdentifyCompanySoapIn" />
+      <wsdl:output message="tns:IdentifyCompanySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IdentifyPersonWithoutSSN">
+      <wsdl:input message="tns:IdentifyPersonWithoutSSNSoapIn" />
+      <wsdl:output message="tns:IdentifyPersonWithoutSSNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IdentifyCompanyWithoutOrgNO">
+      <wsdl:input message="tns:IdentifyCompanyWithoutOrgNOSoapIn" />
+      <wsdl:output message="tns:IdentifyCompanyWithoutOrgNOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectedCompany">
+      <wsdl:input message="tns:GetSelectedCompanySoapIn" />
+      <wsdl:output message="tns:GetSelectedCompanySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectedPerson">
+      <wsdl:input message="tns:GetSelectedPersonSoapIn" />
+      <wsdl:output message="tns:GetSelectedPersonSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IDServiceSoap" type="tns:IDServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IdentifyPerson">
+      <soap:operation soapAction="http://invoicecompany.se/idservice/IdentifyPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IdentifyCompany">
+      <soap:operation soapAction="http://invoicecompany.se/idservice/IdentifyCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IdentifyPersonWithoutSSN">
+      <soap:operation soapAction="http://invoicecompany.se/idservice/IdentifyPersonWithoutSSN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IdentifyCompanyWithoutOrgNO">
+      <soap:operation soapAction="http://invoicecompany.se/idservice/IdentifyCompanyWithoutOrgNO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectedCompany">
+      <soap:operation soapAction="http://invoicecompany.se/idservice/GetSelectedCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectedPerson">
+      <soap:operation soapAction="http://invoicecompany.se/idservice/GetSelectedPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IDServiceSoap12" type="tns:IDServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IdentifyPerson">
+      <soap12:operation soapAction="http://invoicecompany.se/idservice/IdentifyPerson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IdentifyCompany">
+      <soap12:operation soapAction="http://invoicecompany.se/idservice/IdentifyCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IdentifyPersonWithoutSSN">
+      <soap12:operation soapAction="http://invoicecompany.se/idservice/IdentifyPersonWithoutSSN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IdentifyCompanyWithoutOrgNO">
+      <soap12:operation soapAction="http://invoicecompany.se/idservice/IdentifyCompanyWithoutOrgNO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectedCompany">
+      <soap12:operation soapAction="http://invoicecompany.se/idservice/GetSelectedCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectedPerson">
+      <soap12:operation soapAction="http://invoicecompany.se/idservice/GetSelectedPerson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IDService">
+    <wsdl:port name="IDServiceSoap" binding="tns:IDServiceSoap">
+      <soap:address location="https://id.invoicecompany.com/idservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IDServiceSoap12" binding="tns:IDServiceSoap12">
+      <soap12:address location="https://id.invoicecompany.com/idservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,12 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Fakturaadress.master" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin_Admin" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="Server">
+    <asp:ContentPlaceHolder ID="HeadContent2" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
+    <asp:ContentPlaceHolder ID="MainContent2" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+ 
