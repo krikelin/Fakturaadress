@@ -25,6 +25,9 @@
                 <asp:BoundField DataField="endDate" HeaderText="Slutdatum" 
                     SortExpression="endDate" />
                
+                     <asp:BoundField DataField="clicks" DataFormatString="{0}" 
+                    HeaderText="Antal klick" SortExpression="clicks" />
+               
                      <asp:CommandField ShowSelectButton="False"  />
                
             </Columns>

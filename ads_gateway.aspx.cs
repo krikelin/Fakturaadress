@@ -19,7 +19,7 @@ public partial class ads_gateway : System.Web.UI.Page
         if (sqr.HasRows)
         {
             sqr.Read();
-            String redirect_to = (String)sqr["target_url"];
+             String redirect_to = (String)sqr["target_url"];
             SqlConnection conn2 = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             conn2.Open();
             // Increase the click count

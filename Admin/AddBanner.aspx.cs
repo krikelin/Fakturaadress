@@ -88,16 +88,17 @@ public partial class Admin_AddBanner : System.Web.UI.Page
         if (Index == 0)
         {
 
-            SqlCommand Query = new System.Data.SqlClient.SqlCommand(@"INSERT INTO ads(startDate,endDate,ImageUrl,NavigateUrl,AlternateText,Keywords,Impressions,Width,Height) VALUES ('" + _StartDate.ToString("yyyy'-'MM'-'dd' 'HH':'mm':'ss") + "','" + _EndDate.ToString("yyyy'-'MM'-'dd' 'HH':'mm':'ss") + "','ads/" + FileUpload1.FileName + "','" + Url + "','" + AltText + "','" + Keywords + "'," + impressions.ToString() + ","+imgWidth+","+imgHeight+")", Conn);
+            SqlCommand Query = new System.Data.SqlClient.SqlCommand(@"INSERT INTO ads(startDate,endDate,ImageUrl,NavigateUrl,AlternateText,Keywords,Impressions,Width,Height) VALUES ('" + _StartDate.ToString("yyyy-MM-dd HH:mm:ss") + "','" + _EndDate.ToString("yyyy-MM-dd HH:mm:ss") + "','ads/" + FileUpload1.FileName + "','" + Url + "','" + AltText + "','" + Keywords + "'," + impressions.ToString() + "," + imgWidth + "," + imgHeight + ")", Conn);
             Query.ExecuteNonQuery();
             var id = new SqlCommand("SELECT @@IDENTITY", Conn).ExecuteScalar();
-            Query = new SqlCommand(@"UPDATE ads SET NavigateUrl = 'ads_gateway.aspx?id=" + id + "' WHERE id = " + id);
+            Query = new SqlCommand(@"UPDATE ads SET NavigateUrl = '~/ads_gateway.aspx?id=" + id + "', target_url ='"+Url.Replace("'","")+"', clicks = 0 WHERE id = " + id, Conn);
+            Query.ExecuteNonQuery();
 
         }
         else
         {
 
-            SqlCommand Query = new System.Data.SqlClient.SqlCommand("UPDATE ads SET startDate='" + _StartDate.ToString("yyyy'-'MM'-'dd' 'HH':'mm':'ss") + "',endDate='" + _EndDate.ToString("yyyy'-'MM'-'dd' 'HH':'mm':'ss") + "',keywords='" + Keywords + "',AlternateText='" + AltText + "' WHERE ads.ID=" + Index + "");
+            SqlCommand Query = new System.Data.SqlClient.SqlCommand("UPDATE ads SET startDate='" + _StartDate.ToString("yyyy'-'MM'-'dd' 'HH':'mm':'ss") + "',endDate='" + _EndDate.ToString("yyyy-MM-dd HH:mm:ss") + "',keywords='" + Keywords + "',AlternateText='" + AltText + "' WHERE ads.ID=" + Index + "");
             Query.ExecuteNonQuery();
 
 
