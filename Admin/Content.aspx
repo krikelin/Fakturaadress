@@ -27,7 +27,7 @@
              <br />
              <asp:RangeValidator ID="RangeValidator1" runat="server" 
                  ErrorMessage="Bredden måste vara mellan 300 - 600" MaximumValue="600" 
-                 MinimumValue="300" ControlToValidate="BannerWidth"></asp:RangeValidator>
+                 MinimumValue="300" ControlToValidate="BannerWidth" Type="Integer"></asp:RangeValidator>
              <br />
              <br />
              Höjd<br />
@@ -35,7 +35,7 @@
              <br />
              <asp:RangeValidator ID="RangeValidator2" runat="server" 
                  ErrorMessage="Höjden måste vara mellan 300 - 600" MaximumValue="300" 
-                 MinimumValue="50" ControlToValidate="BannerHeight"></asp:RangeValidator>
+                 MinimumValue="50" ControlToValidate="BannerHeight" Type="Integer"></asp:RangeValidator>
         </div>
         <div id="tabs-3">
            <small> E-postadress för supportärenden. Denna adress syns inte för användare utan används av det automatiska

@@ -91,7 +91,7 @@ public partial class Admin_AddBanner : System.Web.UI.Page
             SqlCommand Query = new System.Data.SqlClient.SqlCommand(@"INSERT INTO ads(startDate,endDate,ImageUrl,NavigateUrl,AlternateText,Keywords,Impressions,Width,Height) VALUES ('" + _StartDate.ToString("yyyy-MM-dd HH:mm:ss") + "','" + _EndDate.ToString("yyyy-MM-dd HH:mm:ss") + "','ads/" + FileUpload1.FileName + "','" + Url + "','" + AltText + "','" + Keywords + "'," + impressions.ToString() + "," + imgWidth + "," + imgHeight + ")", Conn);
             Query.ExecuteNonQuery();
             var id = new SqlCommand("SELECT @@IDENTITY", Conn).ExecuteScalar();
-            Query = new SqlCommand(@"UPDATE ads SET NavigateUrl = '~/ads_gateway.aspx?id=" + id + "', target_url ='"+Url.Replace("'","")+"', clicks = 0 WHERE id = " + id, Conn);
+            Query = new SqlCommand(@"UPDATE ads SET NavigateUrl = '"+Url.Replace("'","")+"', clicks = 0 WHERE id = " + id, Conn);
             Query.ExecuteNonQuery();
 
         }

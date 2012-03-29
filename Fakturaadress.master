@@ -22,7 +22,7 @@
            
             <asp:SqlDataSource ID="AdsDisplay" runat="server" 
             ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
-            SelectCommand="SELECT * FROM [ads] "></asp:SqlDataSource>
+            SelectCommand="SELECT * FROM [ads] WHERE  DATEDIFF(day, CURRENT_TIMESTAMP, endDate ) > 0 AND DATEDIFF(day,CURRENT_TIMESTAMP , startDate) < 0 "></asp:SqlDataSource>
            
             <br />
             <br />

@@ -116,7 +116,7 @@
                     <td colspan="2">
                         <asp:Button ID="Button1" runat="server" Text="Lägg till" 
                             oncommand="Button1_Command" onclick="Button1_Click1" 
-                            PostBackUrl="~/Admin/AddBanner.aspx" />
+                            PostBackUrl="~/Admin/AddBanner.aspx" style="height: 26px" />
                     
                     </td>
                </tr>

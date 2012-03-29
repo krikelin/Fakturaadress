@@ -66,7 +66,7 @@ public partial class Contact : System.Web.UI.Page
         String summary = summaryTextBox.Text;
         String email = emailTextBox.Text;
         String text = commentsTextBox.Text;
-        SendHelpQuery("", email, new ContentManager().SupportEmail, summary, text, "", "", ip.ToString());
+        SendHelpQuery("drsounds@gmail.com", email, new ContentManager().SupportEmail, summary, text, "", "", ip.ToString());
 
     }
 }
