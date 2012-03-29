@@ -63,7 +63,7 @@
                         </tr>
                         <tr>
                             <td style="text-align: right" colspan="2">
-                               <a href="~/Help.aspx">Hur använder jag tjänsten</a>
+                               <asp:HyperLink runat="server" NavigateUrl="~/Help.aspx">Hur använder jag tjänsten</asp:HyperLink>
                     
                                 <asp:Button ID="Button1" runat="server" Text="Sök" Width="106px" 
                                     onclick="Button1_Click"  />

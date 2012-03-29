@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 /// </summary>
 public interface IContentManager
 {
+    
     /// <summary>
     /// Content text for Terms of conditions
     /// </summary>
@@ -29,8 +30,20 @@ public interface IContentManager
     /// Content text for the right5 column field
     /// </summary>
     String RightColumnText { get; set; }
-
+    /// <summary>
+    /// Support Email
+    /// </summary>
      String SupportEmail { get; set; }
+    /// <summary>
+    /// How to use the service
+    /// </summary>
+     String HowTo { get; set; }
+
+    /// <summary>
+    /// Which SMTP Server
+    /// </summary>
+     String SMTP { get; set; }
+   
     /// <summary>
     /// Creates SQL connection
     /// </summary>

@@ -19,6 +19,8 @@ public partial class Admin_Content : System.Web.UI.Page
             RightColumnText.Text = cm.RightColumnText;
             SupportEmail.Text = cm.SupportEmail;
             UserAgreementText.Text = cm.TermsOfConditions;
+            tbSMTP.Text = cm.SMTP;
+            HowToText.Text = cm.HowTo;
         }
 
     }
@@ -38,9 +40,10 @@ public partial class Admin_Content : System.Web.UI.Page
         RightColumnText.Text = cm.RightColumnText;
         // Show the message
         lNotifySaved.Visible = true;
-
+        cm.HowTo = HowToText.Text;
         cm.TermsOfConditions = UserAgreementText.Text;
         cm.SupportEmail = SupportEmail.Text;
+        cm.SMTP = tbSMTP.Text;
 
        
     }

@@ -17,10 +17,12 @@
         <ul>
             <li><a href="#tabs-1">Kolumner</a></li>
             <li><a href="#tabs-2">Användaravtal</a></li>
-            <li><a href="#tabs-3">Supportkonfiguration</a></li>
-            <li><a href="#tabs-4">Annonsformat</a></li>
+            <li><a href="#tabs-3">Hur använder man tjänsten? text</a></li>
+            
+            <li><a href="#tabs-4">Supportkonfiguration</a></li>
+            <li><a href="#tabs-5">Annonsformat</a></li>
         </ul>
-         <div id="tabs-4">
+         <div id="tabs-5">
            <small>Annonsstorlek</small><br />
              Bredd<br />
              <asp:TextBox ID="BannerWidth" runat="server" CausesValidation="True" />
@@ -37,10 +39,20 @@
                  ErrorMessage="Höjden måste vara mellan 300 - 600" MaximumValue="300" 
                  MinimumValue="50" ControlToValidate="BannerHeight" Type="Integer"></asp:RangeValidator>
         </div>
-        <div id="tabs-3">
+
+        <div id="tabs-4">
            <small> E-postadress för supportärenden. Denna adress syns inte för användare utan används av det automatiska
             supportformuläret.</small><br />
              <asp:TextBox ID="SupportEmail" runat="server" />
+            <br />
+            SMTP-server<br />
+            <asp:TextBox ID="tbSMTP" runat="server"></asp:TextBox>
+            <br />
+        </div>
+        <div id="tabs-3">
+            <small>Hur använder man tjänsten-text</small>
+             <asp:TextBox ID="HowToText" TextMode="MultiLine" runat="server" Width="100%" Height="200" />
+
         </div>
         <div id="tabs-2">
             <asp:TextBox Width="100%" Height="320" TextMode="MultiLine" ID="UserAgreementText" runat="server" />

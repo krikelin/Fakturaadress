@@ -140,6 +140,36 @@ public class ContentManager : IContentManager
             WriteFile("RightColumn.htm", value);
         }
     }
+    public String HowTo
+    {
+        
+        get
+        {
+            return GetFromFile("smtp.htm", "");
+        }
+        set
+        {
+            WriteFile("smtp.htm", value);
+        }
+    }
+    public string SMTP
+    {
+        get
+        {
+            try
+            {
+                return ConfigurationManager.AppSettings["SMTP"];
+            }
+            catch (KeyNotFoundException e)
+            {
+                return "drsounds@gmail.com";
+            }
+        }
+        set
+        {
+            ConfigurationManager.AppSettings["SMTP"] = value;
+        }
+    }
     public string SupportEmail
     {
         get
