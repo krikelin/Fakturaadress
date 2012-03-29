@@ -9,10 +9,34 @@
     <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui-1.8.14.custom.min.js"></script>
     <link rel="Stylesheet" href="css/ui-lightness/jquery-ui-1.8.14.custom.css" />
+   
     <asp:ContentPlaceHolder id="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>
     <body>
+        <script type="text/javascript">
+            function close_popup() {
+                $("#popup_content").html("");
+               
+                $("#popupWindow").fadeOut('fast', function () {
+                    $("#fader").fadeOut('fast');
+                });
+            }
+            function popup(url) {
+                $("#popupWindow").css({ display: "block", left: "50%", top: "50%", width: "50px", height: "20px" });
+                $("#fader").fadeIn('slow', function () {
+                    $("#popup").fadeIn();
+                    $("#popupWindow").animate({ left:"20%", top:"20%", width: "60%", height: "320px" });
+                    $("#popup_content").html("<img src=\"<%=Request.ApplicationPath%>/img/throbber.png\" />"); // Display throbber
+                    $.ajax({
+                        url: url,
+                        success: function (data) {
+                            $("#popup_content").html(data);
+                        }
+                    });
+                });
+            }
+    </script>
 
     <form id="form1" runat="server">
     <strong>This is an prototype, and information presented in this service may not reflect any service,peope or entity in the reality. </strong>
@@ -63,7 +87,7 @@
                         </tr>
                         <tr>
                             <td style="text-align: right" colspan="2">
-                               <asp:HyperLink runat="server" NavigateUrl="~/Help.aspx">Hur använder jag tjänsten</asp:HyperLink>
+                               <a href="#" onclick="popup('<%=Request.ApplicationPath%>/Help.aspx');">Hur använder jag tjänsten</a>
                     
                                 <asp:Button ID="Button1" runat="server" Text="Sök" Width="106px" 
                                     onclick="Button1_Click"  />
@@ -89,6 +113,16 @@
                     <asp:Hyperlink ID="TOS" NavigateUrl="~/TermsOfService.aspx" runat="server">Allmänna villkor</asp:Hyperlink> | <asp:Hyperlink ID="Hyperlink1" runat="server" NavigateUrl="~/Contact.aspx">Kontakta oss / Ändra uppgifter</asp:Hyperlink>
                 </div>
     </div>
+     <div id="fader">
+         <div id="popupWindow">
+        <a href="#" onclick="close_popup()">Close</a>
+        <div id="popup_content">
+        
+        </div>
+    </div>
+    </div>
+   
     </form>
+    
 </body>
 </html>
