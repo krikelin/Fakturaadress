@@ -15,12 +15,53 @@
 </head>
     <body>
         <script type="text/javascript">
+            $(document).ready(function () {
+
+                if (self.location.href.indexOf("#updated") != -1) {
+                 
+                    notify("Inställningarna har sparats!");
+                }
+            });
+            window.onbeforeunload = (function () {
+
+                notify("Bearbetar...");
+            });
+            function notify(msg) {
+             
+                $("#notify").html(msg);
+                $("#notify").fadeIn('fast');
+                $("#notify").css({ left: "15%", top: "0px", width: "60%", height: "10px" });
+                $("#notify").animate({ left: "15%", width: "60%", height: "24px" }, 'fast', function () {
+                   
+                        
+                        setTimeout(function () {
+                            $("#notify").fadeOut('slow');
+                        }, 2000);
+                 
+                });
+            }
             function close_popup() {
                 $("#popup_content").html("");
                
                 $("#popupWindow").fadeOut('fast', function () {
                     $("#fader").fadeOut('fast');
                 });
+            }
+            function submit() {
+
+                if (Page_IsValid) {
+                    $("#throbber").fadeIn('slow');
+                    $("#throbber").animate({ left: '35%', top: "35%", width: '32px', height: '32px' }, 'fast', function () {
+                        $("#throbberIMG").fadeIn();
+                    });
+                    $("input[type=\"submit\"], button[type=\"submit\"]").each(function (index) {
+
+                        $(this).attr("class", "progress");
+                    });
+
+                    //        alert("A");    
+                    return false;
+                }
             }
             function popup(url) {
                 $("#popupWindow").css({ display: "block", left: "50%", top: "50%", width: "50px", height: "20px" });
@@ -39,7 +80,6 @@
     </script>
 
     <form id="form1" runat="server">
-    <strong>This is an prototype, and information presented in this service may not reflect any service,peope or entity in the reality. </strong>
     <div class="binary">
         <asp:AdRotator ID="AdRotator1" runat="server" 
                 CssClass="ads" DataSourceID="AdsDisplay"  />
@@ -123,6 +163,11 @@
     </div>
    
     </form>
-    
+    <div id="notify" style="display: none">
+        <span>Ändringarna sparades</span>
+    </div>
+    <div id="throbber" style="display: none">
+        <img  style="display: none" id="throbberIMG" src="img/throbber.gif" alt="loading" />
+    </div>
 </body>
 </html>

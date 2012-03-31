@@ -1,18 +1,45 @@
-﻿body {
+﻿body 
+{
   font-family:"Arial";
     background-repeat: repeat-x;
-background-image: url('../../img/bg.png');
+background-image: url('img/bg.png');
     
     filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',
                 startColorstr=#ffffff, 
                endColorstr=orange, 
                GradientType=0);
                background-color:#fc9100;
+}
+#throbber 
+{
+    position:fixed;
+    left:20%;
+    top:20%;
+    
+    padding: 2px;
+    background-color:#ffffff;
+    border-radius:15px;
+    box-shadow: 0px 1px 3px #aaaaaa;
+    padding:12px;
+    overflow: hidden;
+}
 
+#notify 
+{
+    overflow:hidden;
+    background-color:#ffffaa;
+    padding:12px;
+    position: fixed;
+    color:#444444;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Tahoma";
+    font-size: 13px;
+    height: 32px;
 }
 #fader 
 {
-    background-image: url('../../img/fader.png');
+    background-image: url('img/fader.png');
     display: none;  width:100%; height:100%; position:absolute; left: 0px; top:0px; 
 }
 #popupWindow 
@@ -34,7 +61,7 @@ background-image: url('../../img/bg.png');
 }
 .ref
 {
-    list-style-image: url('../../icons/reference.png');
+    list-style-image: url('icons/reference.png');
 }
 .ads
 {
@@ -81,18 +108,8 @@ H3
     font-size:12px;
     font-weight:bold;
 }
-ton,.button
-{
-    border-style: none;
-    border-color: inherit;
-    border-width: medium;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    font-size:24px;
-    background-image: url('../../img/search.png');
-    background-size:100%;
-    font-family:"Impact";
-}
+
+
 .item td
 {
     border-bottom: yellow;
@@ -155,4 +172,71 @@ a
 .helle a
 {
     color:#FFFFFF !important;
+}
+input, textarea 
+{
+   
+}
+input, textarea 
+{
+    border: 1px solid #cccccc;
+    border-radius:8px;
+ 
+}
+*:focus {outline: none;}
+*:focus, button:active, input[type="submit"]:hover 
+{
+    
+     box-shadow: 0px 0px 13px #ffee44;
+}
+    
+
+ton,.button,input[type="submit"]
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    -webkit-border-radius: 42px;
+    -moz-border-radius: 42px;
+    font-size:20px;
+    background-image: url('img/btn_normal.png');
+    padding:10px;
+    padding-top:0px;
+    padding-left:12px;
+    padding-right:12px;
+    background-size:100% 100%;
+    font-family:"Impact";
+    border: 1px solid #bbaa00;
+    box-shadow: inset 0px 0px 1px #ffffee;
+    
+}
+input[type="submit"] 
+{
+    padding: 20px;
+    padding-top: 2px;
+    padding-bottom:30px;
+}
+.button:hover 
+{
+    
+}
+.button:active 
+{
+    background-image: url('img/btn_active.png');
+    
+}
+@-webkit-keyframes roll {
+ from {
+   background-position: 0px 0px;
+ }
+ to {
+   background-position: 40px 0px;
+ }
+}
+.progress 
+{
+    background: url("img/btn_stripe.png") !important;
+    -webkit-animation: roll 5s linear infinite !important;
+    background-size: 40px 40px !important;
+    
 }

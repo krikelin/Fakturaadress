@@ -9,7 +9,8 @@ public partial class Fakturaadress : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-       
+ //       Page.GetPostBackEventReference(this, "");
+          ScriptManager.RegisterOnSubmitStatement(this, this.GetType(), "submitScript", "submit()");
     }
     protected void Button1_Click(object sender, EventArgs e)
     {

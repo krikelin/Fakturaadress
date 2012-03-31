@@ -21,6 +21,8 @@ public partial class Admin_Content : System.Web.UI.Page
             UserAgreementText.Text = cm.TermsOfConditions;
             tbSMTP.Text = cm.SMTP;
             HowToText.Text = cm.HowTo;
+            autoReply.Text = cm.AutoReply;
+            ReplyEmail.Text = cm.ReplyEmail;
         }
 
     }
@@ -44,6 +46,9 @@ public partial class Admin_Content : System.Web.UI.Page
         cm.TermsOfConditions = UserAgreementText.Text;
         cm.SupportEmail = SupportEmail.Text;
         cm.SMTP = tbSMTP.Text;
+        cm.AutoReply = autoReply.Text;
+        cm.ReplyEmail = ReplyEmail.Text;
+        Response.Redirect("./Content.aspx");
 
        
     }

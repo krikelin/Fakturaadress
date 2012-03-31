@@ -140,6 +140,25 @@ public class ContentManager : IContentManager
             WriteFile("RightColumn.htm", value);
         }
     }
+    
+    public String AutoReply
+    {
+        get
+        {
+            try
+            {
+                return ConfigurationManager.AppSettings["AutoReply"];
+            }
+            catch
+            {
+                return "";
+            }
+        }
+        set
+        {
+            ConfigurationManager.AppSettings["AutoReply"] = value;
+        }
+    }
     public String HowTo
     {
         
@@ -180,7 +199,7 @@ public class ContentManager : IContentManager
             }
             catch (KeyNotFoundException e)
             {
-                return "drsounds@gmail.com";
+                return "";
             }
         }
         set
@@ -204,6 +223,26 @@ public class ContentManager : IContentManager
         set
         {
             ConfigurationManager.AppSettings["ConnectionString"] = value;
+        }
+    }
+
+
+    public string ReplyEmail
+    {
+        get
+        {
+            try
+            {
+                return ConfigurationManager.AppSettings["ReplyEmail"];
+            }
+            catch (KeyNotFoundException e)
+            {
+                return "drsounds@gmail.com";
+            }
+        }
+        set
+        {
+            ConfigurationManager.AppSettings["ReplyEmail"] = value;
         }
     }
 }

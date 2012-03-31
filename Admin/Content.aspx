@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent2" Runat="Server">
    
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent2" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent2"  Runat="Server">
     <h2>Ändra texter</h2>
 
     <asp:Label ID="lNotifySaved" runat="server" 
@@ -13,7 +13,8 @@
              $("#tabs").tabs();
          });
     </script>
-    <div id="tabs" >
+    <div ID="tabs">
+        <asp:Panel asp:Panel DefaultButton="btnSave" runat="server">
         <ul>
             <li><a href="#tabs-1">Kolumner</a></li>
             <li><a href="#tabs-2">Användaravtal</a></li>
@@ -46,7 +47,11 @@
              <asp:TextBox ID="SupportEmail" runat="server" />
             <br />
             SMTP-server<br />
-            <asp:TextBox ID="tbSMTP" runat="server"></asp:TextBox>
+            <asp:TextBox ID="tbSMTP" runat="server"></asp:TextBox><br />
+            Svarsaddress<br />
+            <asp:TextBox ID="ReplyEmail" runat="server"></asp:TextBox><br />
+            Autosvar <br />
+            <asp:TextBox Width="100%" Height="320" TextMode="MultiLine" ID="autoReply" runat="server" />
             <br />
         </div>
         <div id="tabs-3">
@@ -78,10 +83,12 @@
                 </tr>
             </table>
         </div>
+         </asp:Panel>
      </div>
     <br />
    
     <asp:Button ID="btnSave" runat="server" Text="Spara" 
-    onclick="btnSave_Click" />
+    onclick="btnSave_Click" UseSubmitBehavior="True" />
+   
 </asp:Content>
 

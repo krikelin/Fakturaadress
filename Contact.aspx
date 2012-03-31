@@ -1,12 +1,16 @@
 ﻿ <%@ Page Title="" Language="C#" MasterPageFile="~/Fakturaadress.master" AutoEventWireup="true" CodeFile="Contact.aspx.cs" Inherits="Contact" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
+
+<script type="text/javascript">
+   
+</script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                 ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
                 SelectCommand="SELECT [name], [id] FROM [ticket_type]"></asp:SqlDataSource>
-
+    
             
      <br />
     Vänligen notera att ditt IP-nummer kommer att loggas när du skickar ett 

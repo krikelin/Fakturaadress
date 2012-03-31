@@ -35,30 +35,31 @@ public partial class Contact : System.Web.UI.Page
     /// <param name="comments"></param>
     /// <param name="text"></param>
     /// <param name="type"></param>
-    private void SendHelpQuery(String hash,string email, string to, string summary, string comments, string text, string type, string ip)
+    private void SendHelpQuery(string from, string summary, string comments, string ip)
     {
+        ContentManager cm = new ContentManager();
         // Send an auto reply
         var d = new System.Web.Mail.MailMessage();
+        d.Body = cm.AutoReply;
+  //    d.Body = "Tack för din förfrågan. Din förfrågan har nu skickats. Vi besvarar den så fort vi kan";
+    //  d.Body += "\n Var god svara inte på detta mejl då denna använder en fiktiv epostadress. Vid ytterligare förfrågan använd formuläret igen";
 
-        d.Body = "Tack för din förfrågan. Din förfrågan har nu skickats. Vi besvarar den så fort vi kan";
-        d.Body += "\n Var god svara inte på detta mejl då denna använder en fiktiv epostadress. Vid ytterligare förfrågan använd formuläret igen";
-
-        d.Subject = "Autosvar från fakturaadress.se";
-        d.From = to;
-        d.To = email;
-        System.Web.Mail.SmtpMail.SmtpServer = "smtprelay1.telia.com";
+      //d.Subject = "Autosvar från fakturaadress.se";
+        d.From = cm.AutoReply;
+        d.To = from;
+        System.Web.Mail.SmtpMail.SmtpServer = cm.SMTP;
         System.Web.Mail.SmtpMail.Send(d);
 
         // Send the help query
         d = new System.Web.Mail.MailMessage();
 
         d.Body = "";
-        d.Body += "\n "+summary+"\n\n"+comments+"\n\n Från: "+email+" \n\n Från IP-nummer:"+ip;
+        d.Body += "\n "+summary+"\n\n"+comments+"\n\n Från: "+from+" \n\n Från IP-nummer:"+ip;
 
         d.Subject = summary;
-        d.From = email;
-        d.To = to;
-       
+        d.From = from;
+        d.To = cm.SupportEmail;
+        System.Web.Mail.SmtpMail.Send(d);
     }
     protected void InsertButton_Click(object sender, EventArgs e)
     {
@@ -66,7 +67,8 @@ public partial class Contact : System.Web.UI.Page
         String summary = summaryTextBox.Text;
         String email = emailTextBox.Text;
         String text = commentsTextBox.Text;
-        SendHelpQuery("drsounds@gmail.com", email, new ContentManager().SupportEmail, summary, text, "", "", ip.ToString());
+        ContentManager cm = new ContentManager();
+        SendHelpQuery(email, summary, text, ip.ToString());
 
     }
 }

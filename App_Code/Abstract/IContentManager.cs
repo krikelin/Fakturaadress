@@ -34,6 +34,7 @@ public interface IContentManager
     /// Support Email
     /// </summary>
      String SupportEmail { get; set; }
+     String ReplyEmail { get; set; }
     /// <summary>
     /// How to use the service
     /// </summary>
@@ -54,4 +55,5 @@ public interface IContentManager
     /// Connection string for the database
     /// </summary>
      String ConnectionString { get; set; }
+     String AutoReply { get; set; }
 }
