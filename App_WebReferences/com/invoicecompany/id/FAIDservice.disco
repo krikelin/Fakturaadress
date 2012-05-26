@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://id.invoicecompany.com/FAIDservice.asmx?wsdl" docRef="https://id.invoicecompany.com/FAIDservice.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://id.invoicecompany.com/FAIDservice.asmx" xmlns:q1="http://invoicecompany.se/idservice/" binding="q1:FAIDServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://id.invoicecompany.com/FAIDservice.asmx" xmlns:q2="http://invoicecompany.se/idservice/" binding="q2:FAIDServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

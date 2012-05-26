@@ -1,173 +1,168 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Fakturaadress.master.cs" Inherits="Fakturaadress" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-   
-    <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
-	<script type="text/javascript" src="js/jquery-ui-1.8.14.custom.min.js"></script>
-    <link rel="Stylesheet" href="css/ui-lightness/jquery-ui-1.8.14.custom.css" />
-   
-    <asp:ContentPlaceHolder id="HeadContent" runat="server">
-    </asp:ContentPlaceHolder>
-</head>
-    <body>
-        <script type="text/javascript">
-            $(document).ready(function () {
+    <head runat="server" profile="http://a9.com/-/spec/opensearch/1.1/">
+        <title></title>
+        <link rel="shortcut icon" href="http://localhost:2828/favicon.ico" />
+        <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+	    <script type="text/javascript" src="js/jquery-ui-1.8.14.custom.min.js"></script>
+        <link rel="search" href="Scripts/opensearch.xml"  type="application/opensearchdescription+xml" title="Fakturaadress" />
+        <asp:ContentPlaceHolder id="HeadContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </head>
+     <body>
+            <script type="text/javascript">
+                $(document).ready(function () {
 
-                if (self.location.href.indexOf("#updated") != -1) {
+                    if (self.location.href.indexOf("#updated") != -1) {
                  
-                    notify("Inställningarna har sparats!");
-                }
-            });
-            window.onbeforeunload = (function () {
+                        notify("Inställningarna har sparats!");
+                    }
+                });
+                window.onbeforeunload = (function () {
 
-                notify("Bearbetar...");
-            });
-            function notify(msg) {
+                    notify("Bearbetar...");
+                });
+                function notify(msg) {
              
-                $("#notify").html(msg);
-                $("#notify").fadeIn('fast');
-                $("#notify").css({ left: "15%", top: "0px", width: "60%", height: "10px" });
-                $("#notify").animate({ left: "15%", width: "60%", height: "24px" }, 'fast', function () {
+                    $("#notify").html(msg);
+                    $("#notify").fadeIn('fast');
+                    $("#notify").css({ left: "15%", top: "0px", width: "60%", height: "10px" });
+                    $("#notify").animate({ left: "15%", width: "60%", height: "24px" }, 'fast', function () {
                    
                         
-                        setTimeout(function () {
-                            $("#notify").fadeOut('slow');
-                        }, 2000);
+                            setTimeout(function () {
+                                $("#notify").fadeOut('slow');
+                            }, 2000);
                  
-                });
-            }
-            function close_popup() {
-                $("#popup_content").html("");
-               
-                $("#popupWindow").fadeOut('fast', function () {
-                    $("#fader").fadeOut('fast');
-                });
-            }
-            function submit() {
-
-                if (Page_IsValid) {
-                    $("#throbber").fadeIn('slow');
-                    $("#throbber").animate({ left: '35%', top: "35%", width: '32px', height: '32px' }, 'fast', function () {
-                        $("#throbberIMG").fadeIn();
                     });
-                    $("input[type=\"submit\"], button[type=\"submit\"]").each(function (index) {
-
-                        $(this).attr("class", "progress");
-                    });
-
-                    //        alert("A");    
-                    return false;
                 }
-            }
-            function popup(url) {
-                $("#popupWindow").css({ display: "block", left: "50%", top: "50%", width: "50px", height: "20px" });
-                $("#fader").fadeIn('slow', function () {
-                    $("#popup").fadeIn();
-                    $("#popupWindow").animate({ left:"20%", top:"20%", width: "60%", height: "320px" });
-                    $("#popup_content").html("<img src=\"<%=Request.ApplicationPath%>/img/throbber.png\" />"); // Display throbber
-                    $.ajax({
-                        url: url,
-                        success: function (data) {
-                            $("#popup_content").html(data);
-                        }
+                function close_popup() {
+                    $("#popup_content").html("");
+               
+                    $("#popupWindow").fadeOut('fast', function () {
+                        $("#fader").fadeOut('fast');
                     });
-                });
-            }
-    </script>
+                }
+                function submit() {
 
-    <form id="form1" runat="server">
-    <div class="binary">
-        <asp:AdRotator ID="AdRotator1" runat="server" 
-                CssClass="ads" DataSourceID="AdsDisplay"  />
+                    /*if (Page_IsValid)*/ {
+                        $("#throbber").fadeIn('slow');
+                        $("#throbber").animate({ left: '35%', top: "35%", width: '32px', height: '32px' }, 'fast', function () {
+                            $("#throbberIMG").fadeIn();
+                        });
+                        $("input[type=\"submit\"], button[type=\"submit\"]").each(function (index) {
+
+                            $(this).attr("class", "progress");
+                        });
+
+                        //        alert("A");    
+                        return false;
+                    }
+                }
+                function popup(url) {
+                    $("#popupWindow").css({ display: "block", left: "50%", top: "50%", width: "50px", height: "20px" });
+                    $("#fader").fadeIn('slow', function () {
+                        $("#popup").fadeIn();
+                        $("#popupWindow").animate({ left:"20%", top:"20%", width: "60%", height: "320px" });
+                        $("#popup_content").html("<img src=\"<%=Request.ApplicationPath%>/img/throbber.png\" />"); // Display throbber
+                        $.ajax({
+                            url: url,
+                            success: function (data) {
+                                $("#popup_content").html(data);
+                            }
+                        });
+                    });
+                }
+        </script>
+
+        <form id="form1" runat="server">
+        <div class="binary">
+            <asp:AdRotator ID="AdRotator1" runat="server" 
+                    CssClass="ads" DataSourceID="AdsDisplay"  />
            
-            <asp:SqlDataSource ID="AdsDisplay" runat="server" 
-            ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
-            SelectCommand="SELECT * FROM [ads] WHERE  DATEDIFF(day, CURRENT_TIMESTAMP, endDate ) > 0 AND DATEDIFF(day,CURRENT_TIMESTAMP , startDate) < 0 "></asp:SqlDataSource>
-           
-            <br />
-            <br />
-            <table >
+                <asp:SqlDataSource ID="AdsDisplay" runat="server" 
+                ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                SelectCommand="SELECT * FROM [ads] WHERE  DATEDIFF(day, CURRENT_TIMESTAMP, endDate ) > 0 AND DATEDIFF(day,CURRENT_TIMESTAMP , startDate) < 0 "></asp:SqlDataSource>
+          
+                <table class="dynamic">
+                    <tr>
+                        <td><asp:HyperLink NavigateUrl="~/Default.aspx" ID="Image1" runat="server" ImageUrl="~/img/Logo.png" /> </td>
+                        <td width="100%">
+                        </td>
+                        <td>
+                           <asp:Image runat="server" ImageUrl="~/img/primary_hint.png" ID="PrimaryHint" />   
+                        </td>
+                    </tr>
+                </table>
+                
             
-                <tr>
-                    <td><asp:Image ID="Image1" runat="server" ImageUrl="~/img/Logo.png" /> </td>
-                    <td width="100%">
-                    </td>
-                    <td>
-                       <asp:Image runat="server" ImageUrl="~/img/primary_hint.png" ID="PrimaryHint" />   
-                    </td>
-                </tr>
-            </table>
-           
-            
-                   <div class="helle">
+                       <div class="helle">
                  
             
-                    <table width="700px" style="padding:5px">
-                        <tr>
-                            <td  class="title" width="50%" style="text-align: right">
-                               Vad söker du?
-                            </td>
-                            <td>
-                             <asp:TextBox  ID="TextBox1" Width="100%" runat="server"></asp:TextBox>
+                        <table class="searchbar">
+                            <tr>
+                                <td  class="title" width="50%" style="text-align: right">
+                                   Vad söker du?
+                                </td>
+                                <td>
+                                 <asp:TextBox  ID="TextBox1" Width="100%" runat="server"></asp:TextBox>
                             
-                            </td>
-                        </tr>  
-                         <tr style="display:none">
-                            <td width="50%" style="text-align: right">
-                                <span class="title">Var?</span>
-                                 </td>
-                            <td>
-                              <asp:TextBox ID="TextBox2" Width="100%"  runat="server"></asp:TextBox>
+                                </td>
+                            </tr>  
+                             <tr style="display:none">
+                                <td width="50%" style="text-align: right">
+                                    <span class="title">Var?</span>
+                                     </td>
+                                <td>
+                                  <asp:TextBox ID="TextBox2" Width="100%"  runat="server"></asp:TextBox>
                           
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: right" colspan="2">
-                               <a href="#" onclick="popup('<%=Request.ApplicationPath%>/Help.aspx');">Hur använder jag tjänsten</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right" colspan="2">
+                                   <a href="#" onclick="popup('<%=Request.ApplicationPath%>/Help.aspx');">Hur använder jag tjänsten</a>
                     
-                                <asp:Button ID="Button1" runat="server" Text="Sök" Width="106px" 
-                                    onclick="Button1_Click"  />
-                            </td>
-                        </tr>
-                    </table>
-                 </div><br />
-                 <div class="bottom"> 
-                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                                    <asp:Button ID="Button1" runat="server" Text="Sök" Width="106px" 
+                                        onclick="Button1_Click"  />
+                                </td>
+                            </tr>
+                        </table>
+                     </div><br />
+                     <div class="bottom"> 
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
             
-                </asp:ContentPlaceHolder>
+                    </asp:ContentPlaceHolder>
                
         
               
-                 </div>
+                     </div>
                  
-           <br /><br />
-                <div class="bottom">
-                <big>Lägg tid på din verksamhet, lämna fakturorna till oss</big>
-                </div>
-                <br /><br />
-                <div style="text-align:center">
-                    <asp:Hyperlink ID="TOS" NavigateUrl="~/TermsOfService.aspx" runat="server">Allmänna villkor</asp:Hyperlink> | <asp:Hyperlink ID="Hyperlink1" runat="server" NavigateUrl="~/Contact.aspx">Kontakta oss / Ändra uppgifter</asp:Hyperlink>
-                </div>
-    </div>
-     <div id="fader">
-         <div id="popupWindow">
-        <a href="#" onclick="close_popup()">Close</a>
-        <div id="popup_content">
-        
+               <br /><br />
+                    <div class="bottom">
+                    <big>Lägg tid på din verksamhet, lämna fakturorna till oss</big>
+                    </div>
+                    <br /><br />
+                    <div id="menu" style="text-align:center">
+                        <asp:Hyperlink ID="TOS" NavigateUrl="~/TermsOfService.aspx" runat="server">Allmänna villkor</asp:Hyperlink> | <asp:Hyperlink ID="Hyperlink1" runat="server" NavigateUrl="~/Contact.aspx">Kontakta oss / Ändra uppgifter</asp:Hyperlink>
+                    </div>
         </div>
-    </div>
-    </div>
+         <div id="fader">
+             <div id="popupWindow">
+            <a href="#" onclick="close_popup()">Close</a>
+            <div id="popup_content">
+        
+            </div>
+        </div>
+        </div>
    
-    </form>
-    <div id="notify" style="display: none">
-        <span>Ändringarna sparades</span>
-    </div>
-    <div id="throbber" style="display: none">
-        <img  style="display: none" id="throbberIMG" src="img/throbber.gif" alt="loading" />
-    </div>
-</body>
+        </form>
+        <div id="notify" style="display: none">
+            <span>Ändringarna sparades</span>
+        </div>
+        <div id="throbber" style="display: none">
+            <img  style="display: none" id="throbberIMG" src="img/throbber.gif" alt="loading" />
+        </div>
+    </body>
 </html>

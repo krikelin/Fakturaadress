@@ -3,6 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
-Hittade inte något som matchar din sökning
+Det finns ingen information om den här kunden i fakturaadress.se.<br />
+Vill du lägga till uppgifter?<br />
+<asp:HyperLink runat="server" NavigateUrl="~/AddData.aspx" ID="Add">Lägg till uppgifter</asp:HyperLink>
 </asp:Content>
 

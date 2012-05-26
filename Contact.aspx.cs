@@ -37,17 +37,18 @@ public partial class Contact : System.Web.UI.Page
     /// <param name="type"></param>
     private void SendHelpQuery(string from, string summary, string comments, string ip)
     {
+
         ContentManager cm = new ContentManager();
         // Send an auto reply
         var d = new System.Web.Mail.MailMessage();
         d.Body = cm.AutoReply;
   //    d.Body = "Tack för din förfrågan. Din förfrågan har nu skickats. Vi besvarar den så fort vi kan";
     //  d.Body += "\n Var god svara inte på detta mejl då denna använder en fiktiv epostadress. Vid ytterligare förfrågan använd formuläret igen";
-
+            
       //d.Subject = "Autosvar från fakturaadress.se";
-        d.From = cm.AutoReply;
+        d.From = cm.SupportEmail;
         d.To = from;
-        System.Web.Mail.SmtpMail.SmtpServer = cm.SMTP;
+        System.Web.Mail.SmtpMail.SmtpServer = cm.SMTP;  
         System.Web.Mail.SmtpMail.Send(d);
 
         // Send the help query
@@ -70,5 +71,36 @@ public partial class Contact : System.Web.UI.Page
         ContentManager cm = new ContentManager();
         SendHelpQuery(email, summary, text, ip.ToString());
 
+    }
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        ContentPlaceHolder content = (ContentPlaceHolder)Master.FindControl("MainContent");
+        switch (DropDownList1.SelectedValue)
+        {
+
+            case "1":
+                ((Panel)content.FindControl("pAdd")).Visible = true;
+                break;
+            case "2":
+                ((Panel)content.FindControl("pModify")).Visible = true;
+                break;
+        }
+    }
+    protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if(DropDownList1.SelectedValue == "1" || DropDownList1.SelectedValue == "3") {
+            pChange.Visible = true;
+        }
+      
+    }
+    protected void btnChangeInvoice_Click(object sender, EventArgs e)
+    {
+        ContentPlaceHolder content = (ContentPlaceHolder)Master.FindControl("MainContent");
+        ((Panel)content.FindControl("pChangeInvoice")).Visible = true;
+    }
+    protected void btnChangeRequirement_Click(object sender, EventArgs e)
+    {
+        ContentPlaceHolder content = (ContentPlaceHolder)Master.FindControl("MainContent");
+        ((Panel)content.FindControl("pChangeRequirement")).Visible = true;
     }
 }

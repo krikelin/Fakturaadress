@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Fakturaadress</ShortName>
+  <Description>Addressera rätt</Description>
+  <Url type="text/html" template="http://localhost:2828/?q={searchTerms}"/>
+  <Image height="16" width="16" type="image/x-icon">http://localhost:2828/favicon.ico</Image>
+  <Image height="32" width="32" type="image/x-icon">http://localhost:2828/favicon.ico</Image>
+
+  <Developer>IC The Invoice Company AB</Developer>
+</OpenSearchDescription>

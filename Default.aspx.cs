@@ -62,7 +62,7 @@ public partial class _Default : System.Web.UI.Page
                 }
                 else // Otherwise invoke the web service
                 {
-                    com.invoicecompany.id.IDService idservice = new com.invoicecompany.id.IDService();
+                    com.invoicecompany.id.FAIDService idservice = new com.invoicecompany.id.FAIDService(); 
                     Company[] c = idservice.IdentifyCompanyWithoutOrgNO("Alex999", "Mp62cU", "", query, "", "", "", "");
                     if (c.Length < 1)
                     {
